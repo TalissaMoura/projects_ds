@@ -39,9 +39,9 @@ To create the routes, comunicate to database and deploy the model we are using t
     
 * **Database used**: We're using the MongoDB database as it's free and more flexible to save the news informations.
  
-* **The [routes.py](\news\routes.py) file**: In this file, we have two functions the first is `home_page` that loads our `index.html` file and the other is the `more_page` function that grabs more news that are stored in our database. All the news is returned as JSON object and their information is treated by the `loadItems` function defined at `index.html`. Here, also, is where we apply our ML pipeline to predict the category of a news from their title. First, we need to encode our title by using the `NewsTitleEncoder` class, then, we load our model to predict the category from this vector.
+* **The [routes.py](https://github.com/TalissaMoura/projects_ds/blob/otherproject/newsApp/news/routes.py) file**: In this file, we have two functions the first is `home_page` that loads our `index.html` file and the other is the `more_page` function that grabs more news that are stored in our database. All the news is returned as JSON object and their information is treated by the `loadItems` function defined at `index.html`. Here, also, is where we apply our ML pipeline to predict the category of a news from their title. First, we need to encode our title by using the `NewsTitleEncoder` class, then, we load our model to predict the category from this vector.
     
-* **The [models.py](\news\models.py) file**: Here we define the class `NewsTitleEncoder` which has methods to convert the text into vector. They are the same functions used at the data preprocessing step explained below. 
+* **The [models.py](https://github.com/TalissaMoura/projects_ds/blob/otherproject/newsApp/news/models.py) file**: Here we define the class `NewsTitleEncoder` which has methods to convert the text into vector. They are the same functions used at the data preprocessing step explained below. 
 
     
 <li><strong>About the model:</strong></li>

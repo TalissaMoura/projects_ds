@@ -69,7 +69,7 @@ To create the routes, comunicate to database and deploy the model we are using t
 
 Here is the final result!
 
-![Final Result!](https://github.com/TalissaMoura/projects_ds/blob/otherproject/newsApp/images/newsapp2.gif)
+![Final Result!](https://i.imgur.com/KzUh8AQ.gif)
 
 ## If you want to execute this project:
 First, you need to create a virtual environment and download the libraries listed in the `requirements.txt` file. Then, you need to configure the settings for the MongoDB server and Flask application as well. To run the application locally, remember to set the environment variable to set `FLASK_APP=news` at the terminal (for Windows; if you're using Linux/macOS, use `export FLASK_APP=news`) and enter the command `flask run`.

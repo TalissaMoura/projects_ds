@@ -7,7 +7,7 @@ import time,pickle,os
 posts = db.get_collection("posts")
 all_posts = posts.count()
 #loading model from pickle
-model = pickle.load(open(os.path.join(".","news","model","my_model.sav"),"rb"))
+model = pickle.load(open(os.path.join(".","news","model","save","my_model.sav"),"rb"))
 quantity = 20
 
 
@@ -53,7 +53,7 @@ def more_news():
             #no more posts to list
             res = make_response(jsonify({}),200)
         else:
-            for doc in docs[0:quantity]:
+            for doc in docs[counter:counter+quantity]:
               doc_tokens = NewsTitleEncoder(doc["title"]).process_text()
               new_vec = NewsTitleEncoder.text_to_vec(doc_tokens)
               #return category

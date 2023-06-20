@@ -3,13 +3,14 @@ from flask.json import JSONEncoder
 
 import re,contractions,string,pickle,os
 import numpy as np
+import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem.snowball import SnowballStemmer
 
 
-tf_vect = pickle.load(open(os.path.join(".","news","model","tf_vec.sav"),"rb"))
-pca = pickle.load(open(os.path.join(".","news","model","pca.sav"),"rb"))
+tf_vect = pickle.load(open(os.path.join(".","news","model","save","tf_vec.sav"),"rb"))
+pca = pickle.load(open(os.path.join(".","news","model","save","pca.sav"),"rb"))
 
 class MongoJSONEncoder(JSONEncoder):
     def default(self,o):

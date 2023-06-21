@@ -1,7 +1,7 @@
 # NewsApp <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/regular/newspaper.svg" width="50" height="50">
 
 <p align="left">
-    <img src="https://img.shields.io/static/v1?label=Project Status&message=in progress&color=yellow"/>
+    <img src="https://img.shields.io/static/v1?label=Project Status&message=complete&color=green"/>
    
 </p>
 
@@ -69,7 +69,13 @@ To create the routes, comunicate to database and deploy the model we are using t
 
 Here is the final result!
 
-![Final Result!](https://i.imgur.com/KzUh8AQ.gif)
+![Final Result!](./images/newsapp.gif)
 
 ## If you want to execute this project:
-First, you need to create a virtual environment and download the libraries listed in the `requirements.txt` file. Then, you need to configure the settings for the MongoDB server and Flask application as well. To run the application locally, remember to set the environment variable to set `FLASK_APP=news` at the terminal (for Windows; if you're using Linux/macOS, use `export FLASK_APP=news`) and enter the command `flask run`.
+- You need to create a virtual environment and download the libraries listed in the `requirements.txt` file. The python version used is `3.10.2`
+- Run the notebook `news_category_analysis.ipynb` to get the model files to be used and the `selected_news.csv` file
+to be used in the `newsdatabase.ipynb`.
+- Run the notebook `newsdatabase.ipynb` to add the selected news to your [mongodb cluster](https://www.mongodb.com/basics/clusters/mongodb-cluster-setup). Remember to change the dir to point where the `selected_news.csv` is saved. 
+- To run the dockerfile correctly you"ll need to change the dir of your [secrets](https://docs.docker.com/compose/use-secrets/) in the `compose.yaml` file.
+- With all the previous steps complete you can run `docker compose up -d` and access `localhost:5000` to see the application.
+As everything is setup, for now, you only need to execute this command to run the application.  

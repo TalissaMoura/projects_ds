@@ -69,7 +69,7 @@ To create the routes, comunicate to database and deploy the model we are using t
 
 Here is the final result!
 
-![Final Result!](./images/newsapp.gif)
+![Final Result!](https://github.com/TalissaMoura/projects_ds/blob/main/newsApp/images/newsapp.gif)
 
 ## If you want to execute this project:
 - You need to create a virtual environment and download the libraries listed in the `requirements.txt` file. The python version used is `3.10.2`
